@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXScrollPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="624.0" prefWidth="876.0" styleClass="subtle-gray-gradient" stylesheets="@../css/colorBackground.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <VBox prefHeight="442.0" prefWidth="148.0" spacing="5.0" style="-fx-background-color: transparent;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXHamburger fx:id="hamburger" fillWidth="false" prefHeight="20.0" prefWidth="94.0" VBox.vgrow="NEVER">
+               <VBox.margin>
+                  <Insets right="100.0" />
+               </VBox.margin>
+            </JFXHamburger>
+            <JFXDrawer fx:id="drawer" defaultDrawerSize="125.0" />
+         </children>
+         <padding>
+            <Insets top="7.0" />
+         </padding>
+      </VBox>
+   </left>
+   <top>
+      <GridPane fx:id="topBar" alignment="CENTER" hgap="10.0" styleClass="colorGradient" stylesheets="@../css/colorBackground.css" vgap="5.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="NEVER" />
+          <ColumnConstraints hgrow="SOMETIMES" />
+            <ColumnConstraints hgrow="NEVER" />
+            <ColumnConstraints halignment="RIGHT" hgrow="NEVER" />
+            <ColumnConstraints halignment="RIGHT" hgrow="NEVER" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints vgrow="NEVER" />
+        </rowConstraints>
+         <children>
+            <ImageView fitHeight="40.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" GridPane.valignment="CENTER">
+               <image>
+                  <Image url="@../pictures/logo.png" />
+               </image>
+               <GridPane.margin>
+                  <Insets left="15.0" right="15.0" />
+               </GridPane.margin>
+            </ImageView>
+            <TextField maxWidth="750.0" promptText="Search" style="-fx-background-radius: 25;" GridPane.columnIndex="1" />
+            <Separator orientation="VERTICAL" GridPane.columnIndex="2">
+               <effect>
+                  <SepiaTone />
+               </effect>
+            </Separator>
+            <HBox alignment="CENTER" spacing="7.0" GridPane.columnIndex="3">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../pictures/avatar-default.png" />
+                     </image>
+                  </ImageView>
+                  <SplitMenuButton fx:id="usernameSMB" mnemonicParsing="false" styleClass="account-button" stylesheets="@../css/customControls.css" text="Username ">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#newAddAction" text="New add" />
+                      <MenuItem mnemonicParsing="false" text="Profile page" />
+                      <MenuItem mnemonicParsing="false" text="Settings" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#logOutAction" text="Log out" />
+                    </items>
+                  </SplitMenuButton>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" top="5.0" />
+         </padding>
+      </GridPane>
+   </top>
+   <center>
+      <JFXScrollPane BorderPane.alignment="CENTER">
+         <children>
+            <VBox styleClass="subtle-gray-gradient" stylesheets="@../css/colorBackground.css">
+               <children>
+                  <ToolBar prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: transparent;">
+                    <items>
+                        <Label style="-fx-text-fill: #b9b9b9;" text="Order by: " />
+                      <Button mnemonicParsing="false" styleClass="filter-button" stylesheets="@../css/customControls.css" text="Date - ASC" />
+                    </items>
+                  </ToolBar>
+                  <Separator prefWidth="200.0" />
+                  <TilePane fx:id="tilePane" hgap="5.0" style="-fx-background-color: transparent;" styleClass="subtle-gray-gradient" stylesheets="@../css/colorBackground.css" vgap="5.0">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </TilePane>
+               </children>
+            </VBox>
+         </children>
+      </JFXScrollPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,6 @@
+.colorGradient {
+    -fx-background-color: linear-gradient(to right top, #facd68, #fc76b3);
+}
+.subtle-gray-gradient {
+    -fx-background-color: linear-gradient(to right top, #dee1e1 60%, #facd68 50%);
+}

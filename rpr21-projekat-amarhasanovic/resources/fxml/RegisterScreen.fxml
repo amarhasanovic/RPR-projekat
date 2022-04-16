@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="277.0" layoutY="32.0" prefHeight="306.0" prefWidth="300.0" style="-fx-background-radius: 25; -fx-background-color: white;">
+         <children>
+            <VBox layoutX="40.0" layoutY="14.0" prefHeight="179.0" prefWidth="220.0" spacing="7.0">
+               <children>
+                  <TextField fx:id="firstName" promptText="Name" styleClass="t-field" stylesheets="@../css/customControls.css" />
+                  <TextField fx:id="lastName" promptText="Last Name" styleClass="t-field" stylesheets="@../css/customControls.css" />
+                  <TextField fx:id="username" promptText="Username" styleClass="t-field" stylesheets="@../css/customControls.css" />
+                  <TextField fx:id="email" promptText="E-mail" styleClass="t-field" stylesheets="@../css/customControls.css" />
+                  <TextField fx:id="phoneNumber" promptText="Phone (optional)" styleClass="t-field" stylesheets="@../css/customControls.css" />
+                  <TextField fx:id="address" promptText="Address (optional)" styleClass="t-field" stylesheets="@../css/customControls.css" />
+                  <PasswordField fx:id="password" promptText="Password" styleClass="t-field" stylesheets="@../css/customControls.css" />
+                  <PasswordField fx:id="passwordConfirmation" promptText="Re-enter password" styleClass="t-field" stylesheets="@../css/customControls.css" />
+               </children>
+            </VBox>
+            <JFXButton buttonType="RAISED" defaultButton="true" layoutX="97.0" layoutY="277.0" onAction="#registerAction" styleClass="colorGradient" stylesheets="@../css/colorBackground.css" text="Register Account" />
+         </children></AnchorPane>
+      <AnchorPane fx:id="sideBar" layoutX="49.0" layoutY="21.0" prefHeight="329.0" prefWidth="250.0" style="-fx-background-radius: 25;" styleClass="colorGradient" stylesheets="@../css/colorBackground.css">
+         <children>
+            <JFXButton focusTraversable="false" layoutX="212.0" layoutY="14.0" onAction="#exitAction" text="X" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

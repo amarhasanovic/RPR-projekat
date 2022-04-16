@@ -1,0 +1,67 @@
+* {
+	-fx-primary-color: #007acc;
+	-fx-secondary-color: #4B6EAF;
+	-fx-grey-color: #b9b9b9;
+	-fx-focus-color: -fx-secondary-color;
+}
+.t-field-invalid-input {
+	-fx-accent: -fx-primary-color;
+	-fx-background-color: linear-gradient(to top, #FF5252, rgba(255,240,240) 10%);
+	-fx-background-insets: 1 1 0 1, 0 0 1 0;
+	-fx-background-radius: 0;
+}
+
+.t-field {
+	-fx-accent: -fx-primary-color;
+	-fx-background-color: -fx-grey-color, white;
+	-fx-background-insets: 1 1 0 1, 0 0 1 0;
+	-fx-background-radius: 0;
+}
+.t-field:focused {
+	-fx-background-color: -fx-primary-color, white;
+}
+.register-button {
+    -fx-text-fill: -fx-grey-color;
+}
+.register-button:hover {
+    -fx-text-fill: -fx-primary-color;
+    -fx-font-size: 12.5;
+}
+.tool-bar-buttons:hover {
+    -fx-background-color: rgba(0,0,0,0.4);
+}
+.ad-button:hover {
+    -fx-background-color: rgba(0,0,0,0.2);
+}
+.filter-button {
+    -fx-background-color: rgba(51, 51, 51, 0.05);
+    -fx-border-radius: 8px;
+    -fx-color: #333333;
+    -fx-font-size: 12px;
+    -fx-font-weight: 500;
+    -fx-line-height: 20px;
+}
+.filter-button:hover {
+    -fx-background-color: rgba(51, 51, 51, 0.25);
+}
+.account-button {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0, 1, 2;
+    -fx-background-radius: 0 6 6 6, 0 5 5 5, 0 4 4 4;
+}
+.account-button:hover, .account-button:focused {
+    -fx-background-color: -fx-grey-color;
+}
+.account-button .label:hover{
+    -fx-text-fill: rgba(51, 51, 51, 0.75);
+    -fx-background-color: -fx-grey-color;
+}
+.menu-item:hover, .menu-item:focused{
+    -fx-background-color: -fx-grey-color;
+    -fx-background-insets: 0, 1, 2;
+    -fx-background-radius: 0 6 6 6, 0 5 5 5, 0 4 4 4;
+}
+.side-bar{
+    -fx-background-color: linear-gradient(to right top, #facd68, #fc76b3);
+    -fx-background-radius: 0 20 20 0;
+}

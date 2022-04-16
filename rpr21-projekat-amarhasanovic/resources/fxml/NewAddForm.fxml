@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="442.0" prefWidth="734.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="93.0" layoutY="42.0" prefHeight="352.0" prefWidth="582.0" style="-fx-background-radius: 25; -fx-background-color: white;">
+         <children>
+            <TextField fx:id="titleTextField" layoutX="59.0" layoutY="14.0" prefHeight="26.0" prefWidth="294.0" promptText="Job/Offer title" styleClass="t-field" stylesheets="@../css/customControls.css" />
+            <TextArea fx:id="descriptionTextArea" layoutX="59.0" layoutY="101.0" prefHeight="68.0" prefWidth="294.0" promptText="Description" styleClass="t-field" stylesheets="@../css/customControls.css" />
+            <TextField fx:id="addressTextField" layoutX="59.0" layoutY="219.0" prefHeight="26.0" prefWidth="294.0" promptText="Address" styleClass="t-field" stylesheets="@../css/customControls.css" />
+            <TextField fx:id="phoneTextField" layoutX="59.0" layoutY="260.0" prefHeight="26.0" prefWidth="294.0" promptText="Phone number" styleClass="t-field" stylesheets="@../css/customControls.css" />
+            <TextField fx:id="priceTextFIeld" layoutX="59.0" layoutY="303.0" prefHeight="26.0" prefWidth="294.0" promptText="Price range" styleClass="t-field" stylesheets="@../css/customControls.css" />
+            <TextField fx:id="companyTextField" layoutX="59.0" layoutY="184.0" prefHeight="26.0" prefWidth="294.0" promptText="Company" styleClass="t-field" stylesheets="@../css/customControls.css" />
+            <ChoiceBox fx:id="ODchoiceBox" layoutX="59.0" layoutY="57.0" prefWidth="150.0" styleClass="t-field" stylesheets="@../css/customControls.css" />
+            <ImageView fx:id="ODimageView" fitHeight="184.0" fitWidth="172.0" layoutX="385.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-radius: 25;">
+               <image>
+                  <Image url="@../pictures/jobOffer.png" />
+               </image>
+            </ImageView>
+            <JFXButton buttonType="RAISED" layoutX="427.0" layoutY="316.0" onAction="#addNewBtn" prefHeight="26.0" prefWidth="66.0" style="-fx-border-color: #b9b9b9;" text="Add" />
+            <JFXButton buttonType="RAISED" layoutX="501.0" layoutY="316.0" onAction="#cancelBtn" prefHeight="26.0" prefWidth="66.0" style="-fx-border-color: #b9b9b9;" text="Cancel" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="sideBar" layoutX="14.0" layoutY="28.0" prefHeight="379.0" prefWidth="106.0" style="-fx-background-radius: 25;" styleClass="colorGradient" stylesheets="@../css/colorBackground.css" />
+   </children>
+</AnchorPane>
